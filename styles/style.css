@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.navbar {
+    padding: 2.5em 0;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar ul li a {
+    font-size: 18px;
+    font-weight: 900;
+    color: dimgray;
+}
+
+.navbar ul li a:hover {
+    color: #313131;
+}
+
+section h1 {
+    text-align: center;
+    margin: 2em 0;
+    color: #313131;
+}
+
+.cards__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.cards__container span {
+    display: block;
+    width: 100%;
+    grid-area: 1/1/2/3;
+    text-align: center;
+}
+
+.card__wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: .25em;
+    border: 1px solid darkgray;
+    transition: all .4s ease-out;
+}
+
+.card__wrapper.--details {
+    transition: initial;
+    grid-area: 1/1/2/3;
+}
+
+.card__wrapper:hover {
+    transform: scale(1.05);
+}
+
+.card__wrapper.--details:hover {
+    transform: none;
+}
+
+.card__wrapper a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: initial;
+}
+
+.card__wrapper .card__cover {
+    background-color: #414150;
+    height: 220px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card__content {
+    padding: 2em;
+}
+
+.card__content h4 {
+    margin-bottom: 1em;
+}
+
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    border-radius: .25em;
+    border: 1px solid darkgray;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form__wrapper input {
+    padding: .5em .5em;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.form__wrapper label {
+    text-align: center;
+}
+
+.form__wrapper button {
+    border: 0;
+    cursor: pointer;
+    padding: .5em 0;
+    color: white;
+    font-weight: 800;
+    background-color: #455ace;
+}
+
+.form__wrapper button:hover {
+    background-color: #697bdd;
+}
+
+@media screen and (max-width: 678px) {
+    .cards__container {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 1em;
+    }
+}
